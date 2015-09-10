@@ -1,0 +1,34 @@
+{
+  "name": "scraller",
+  "version": "1.0.0",
+  "description": "Easy way to call a function when a element is scrolled into view.",
+  "main": "index.html",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/renanborgez/scraller.git"
+  },
+  "keywords": [
+    "scroll",
+    "javascript",
+    "view",
+    "window",
+    "document",
+    "function"
+  ],
+  "author": "Renan Borges",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/renanborgez/scraller/issues"
+  },
+  "homepage": "https://github.com/renanborgez/scraller#readme",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-concat": "^0.5.1",
+    "grunt-contrib-jshint": "^0.11.3",
+    "grunt-contrib-uglify": "^0.9.2",
+    "grunt-contrib-watch": "^0.6.1"
+  }
+}
