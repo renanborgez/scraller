@@ -23,7 +23,7 @@
   "bugs": {
     "url": "https://github.com/renanborgez/scraller/issues"
   },
-  "homepage": "https://github.com/renanborgez/scraller#readme",
+  "homepage": "https://github.com/renanborgez/scraller",
   "devDependencies": {
     "grunt": "^0.4.5",
     "grunt-contrib-concat": "^0.5.1",

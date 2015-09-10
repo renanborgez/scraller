@@ -4,11 +4,12 @@ module.exports = function (grunt) {
     grunt.initConfig({
         // Metadata
         pkg: grunt.file.readJSON('package.json'),
-        banner: '/*! <%= pkg.name %> - v<%= pkg.version %> - ' +
+        banner: '/*! ' + '<%= "\\n" %>' + '<%= pkg.name %> - v<%= pkg.version %> - ' +
             '<%= grunt.template.today("yyyy-mm-dd") %>\n' +
-            '<%= pkg.homepage ? "* " + pkg.homepage + "\\n" : "" %>' +
-            '* Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %>;' +
-            ' Licensed <%= props.license %> */\n',
+            '<%= pkg.author + "\\n"%>' +
+            '<%= pkg.homepage + "\\n" %>' +
+            'Copyright (c) <%= grunt.template.today("yyyy") %>' + ' - ' +
+            'Licensed under BSB license and MIT license' + '<%= "\\n" %>' + ' */\n',
         // Task configuration
         concat: {
             options: {
@@ -65,6 +66,6 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
 
     // Default task
-    grunt.registerTask('default', ['jshint', 'qunit', 'concat', 'uglify']);
+    grunt.registerTask('default', ['jshint', 'concat', 'uglify']);
 };
 

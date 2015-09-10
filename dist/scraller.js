@@ -1,3 +1,9 @@
+/*! 
+scraller - v1.0.0 - 2015-09-09
+Renan Borges
+https://github.com/renanborgez/scraller
+Copyright (c) 2015 - Licensed under BSB license and MIT license
+ */
 /*!
  * Scraller plugin
  * Author: @renanborgez
