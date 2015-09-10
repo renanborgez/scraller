@@ -32,3 +32,6 @@ Chrome, Firefox, Opera, Safari, IE8+
 
 ## License
 Dual - BDB license and MIT license
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/renanborgez/scraller/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
