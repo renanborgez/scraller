@@ -20,7 +20,8 @@ http://renan.ninja/scraller/
 <script>
 	// Your object must have 2 properties, <params> and <map>
 	// <params> containing a {Array} of parameters (optional)
-	// <map> thats contains a {object} with each property name equals your data-scrall element attribute (required)
+	// <map> thats contains a {object} with each property name equals
+	//       your data-scrall element attribute (required)
 	
 	var obj = {
 		params: ['my','array','of','params'],
