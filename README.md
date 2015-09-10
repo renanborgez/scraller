@@ -1,20 +1,26 @@
-# Scraller 
+# Scraller  [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/renanborgez/scraller/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 Minimalist lib. Thats make easy to call a function when a element is scrolled into view.
+* No jquery
+* No dependencies
+* 1kb minified
 
 ## Demonstration
 http://renan.ninja/scraller/
 
 ## Usage
+```html
 <html>
 	<div data-scrall="foo"></div>
 	<div data-scrall="bar"></div>
 	<div data-scrall="abc"></div>
 	<div data-scrall="xyz"></div>
 </html>
+```
+```javascript
 <script>
-	// Your object must have a object with 2 properties
-	// <params> thats contains a {Array} of parameters
-	// <map> thats contains a {object} with each property name equals your data-scrall element attribute
+	// Your object must have 2 properties, <params> and <map>
+	// <params> containing a {Array} of parameters (optional)
+	// <map> thats contains a {object} with each property name equals your data-scrall element attribute (required)
 	
 	var obj = {
 		params: ['my','array','of','params'],
@@ -26,12 +32,11 @@ http://renan.ninja/scraller/
 		}
 	}
 </script>
+```
 
 ## Support
 Chrome, Firefox, Opera, Safari, IE8+
 
 ## License
 Dual - BDB license and MIT license
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/renanborgez/scraller/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
