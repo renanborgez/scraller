@@ -38,5 +38,5 @@ http://renan.ninja/scraller/
 Chrome, Firefox, Opera, Safari, IE8+
 
 ## License
-Dual - BDB license and MIT license
+Dual - BSB license and MIT license
 
