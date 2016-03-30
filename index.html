@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Scraller : Easy way to call a function when an element is scrolled into view.">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Scraller</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/renanborgez/scraller">View on GitHub</a>
+
+          <h1 id="project_title">Scraller</h1>
+          <h2 id="project_tagline">Easy way to call a function when an element is scrolled into view.</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/renanborgez/scraller/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/renanborgez/scraller/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a id="scraller--" class="anchor" href="#scraller--" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Scraller  <a href="https://bitdeli.com/free" title="Bitdeli Badge"><img src="https://d2weczhvl823v0.cloudfront.net/renanborgez/scraller/trend.png" alt="Bitdeli Badge"></a>
+</h1>
+
+<p>Minimalist lib. Thats make easy to call a function when a element is scrolled into view.</p>
+
+<ul>
+<li>No jquery</li>
+<li>No dependencies</li>
+<li>1kb minified</li>
+</ul>
+
+<h2>
+<a id="demonstration" class="anchor" href="#demonstration" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Demonstration</h2>
+
+<p><a href="http://renan.ninja/scraller/">http://renan.ninja/scraller/</a></p>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage</h2>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">html</span>&gt;
+    &lt;<span class="pl-ent">div</span> <span class="pl-e">data-scrall</span>=<span class="pl-s"><span class="pl-pds">"</span>foo<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">div</span>&gt;
+    &lt;<span class="pl-ent">div</span> <span class="pl-e">data-scrall</span>=<span class="pl-s"><span class="pl-pds">"</span>bar<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">div</span>&gt;
+    &lt;<span class="pl-ent">div</span> <span class="pl-e">data-scrall</span>=<span class="pl-s"><span class="pl-pds">"</span>abc<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">div</span>&gt;
+    &lt;<span class="pl-ent">div</span> <span class="pl-e">data-scrall</span>=<span class="pl-s"><span class="pl-pds">"</span>xyz<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">div</span>&gt;
+&lt;/<span class="pl-ent">html</span>&gt;</pre></div>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">&lt;</span>script<span class="pl-k">&gt;</span>
+    <span class="pl-c">// Your object must have 2 properties, &lt;params&gt; and &lt;map&gt;</span>
+    <span class="pl-c">// &lt;params&gt; containing a {Array} of parameters (optional)</span>
+    <span class="pl-c">// &lt;map&gt; thats contains a {object} with each property name equals</span>
+    <span class="pl-c">//       your data-scrall element attribute (required)</span>
+
+    <span class="pl-k">var</span> obj <span class="pl-k">=</span> {
+        params<span class="pl-k">:</span> [<span class="pl-s"><span class="pl-pds">'</span>my<span class="pl-pds">'</span></span>,<span class="pl-s"><span class="pl-pds">'</span>array<span class="pl-pds">'</span></span>,<span class="pl-s"><span class="pl-pds">'</span>of<span class="pl-pds">'</span></span>,<span class="pl-s"><span class="pl-pds">'</span>params<span class="pl-pds">'</span></span>],
+        map<span class="pl-k">:</span> {
+            <span class="pl-en">foo</span><span class="pl-k">:</span> <span class="pl-k">function</span>(){},
+            <span class="pl-en">bar</span><span class="pl-k">:</span> <span class="pl-k">function</span>(){},
+            <span class="pl-en">abc</span><span class="pl-k">:</span> <span class="pl-k">function</span>(<span class="pl-smi">my</span>,<span class="pl-smi">array</span>,<span class="pl-k">of</span>,<span class="pl-smi">params</span>),
+            xyz: function()
+        }
+    }
+<span class="pl-k">&lt;</span><span class="pl-k">/</span>script<span class="pl-k">&gt;</span></pre></div>
+
+<h2>
+<a id="support" class="anchor" href="#support" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Support</h2>
+
+<p>Chrome, Firefox, Opera, Safari, IE8+</p>
+
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>License</h2>
+
+<p>Dual - BSB license and MIT license</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Scraller maintained by <a href="https://github.com/renanborgez">renanborgez</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
