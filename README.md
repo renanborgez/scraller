@@ -10,28 +10,31 @@ http://renan.ninja/scraller/
 ## Usage
 ```html
 <html>
-	<div data-scrall="foo"></div>
-	<div data-scrall="bar"></div>
-	<div data-scrall="abc"></div>
-	<div data-scrall="xyz"></div>
+  <div data-scrall="foo"></div>
+  <div data-scrall="bar"></div>
+  <div data-scrall="abc"></div>
+  <div data-scrall="xyz"></div>
 </html>
 ```
 ```javascript
 <script>
-	// Your object must have 2 properties, <params> and <map>
-	// <params> containing a {Array} of parameters (optional)
-	// <map> thats contains a {object} with each property name equals
-	//       your data-scrall element attribute (required)
-	
-	var obj = {
-		params: ['my','array','of','params'],
-		map: {
-			foo: function(){},
-			bar: function(){},
-			abc: function(my,array,of,params),
-			xyz: function()
-		}
-	}
+  // Your object must have 2 properties, <params> and <map>
+  // <params> containing a {Array} of parameters (optional)
+  // <map> thats contains a {object} with each property name equals
+  //       your data-scrall element attribute (required)
+  
+  var obj = {
+    params: ['my','array','of','params'],
+    map: {
+      foo: function(){},
+      bar: function(){},
+      abc: function(my,array,of,params),
+      xyz: function()
+    }
+  }
+  
+  // call scraller
+  Scraller(options);
 </script>
 ```
 
