@@ -64,7 +64,7 @@
         <span id="demo-box"></span>
       </div>
       <h1>Scraller</h1>
-      <span>Scroll page and see the functions being called from each element data-scrall-in-in attribute</span>
+      <span>Scroll page and see the functions being called from each element data-scrall-in, off-up or off-down attribute.</span>
       <br />
       <br />
       <br />
@@ -77,7 +77,7 @@
       <br />
       <br />
       <br />
-      <div data-scrall-in="f1">Element #1</div>
+      <div data-scrall-in="f1" data-scrall-out-top="offUp1">Element #1</div>
       <br />
       <br />
       <br />
@@ -341,7 +341,7 @@
       <br />
       <br />
       <br />
-      <div data-scrall-in="f7">Element #7</div>
+      <div data-scrall-in="f7" data-scrall-out-bottom="offDown1">Element #7</div>
     </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -365,6 +365,8 @@
           f5: function(param){writeSample("test5");},
           f6: function(param){writeSample("test6");},
           f7: showAllParms,
+          offUp1: function(params){alert('First element is out to up of view');},
+          offDown1: function(params){alert('Last element is out to down of view');}
         }
       }
       Scraller(options);

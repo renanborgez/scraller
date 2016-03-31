@@ -1,6 +1,6 @@
 {
   "name": "scraller",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Easy way to call a function when a element is scrolled into view.",
   "main": "index.html",
   "scripts": {

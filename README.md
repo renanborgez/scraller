@@ -10,10 +10,10 @@ http://renan.ninja/scraller/
 ## Usage
 ```html
 <html>
-  <div data-scrall="foo"></div>
-  <div data-scrall="bar"></div>
-  <div data-scrall="abc"></div>
-  <div data-scrall="xyz"></div>
+  <div data-scrall-in="foo" data-scrall-out-top="outFromTop"></div>
+  <div data-scrall-in="bar"></div>
+  <div data-scrall-in="abc"></div>
+  <div data-scrall-in="xyz" data-scrall-out-bottom="outFromBottom"></div>
 </html>
 ```
 ```javascript
@@ -21,7 +21,7 @@ http://renan.ninja/scraller/
   // Your object must have 2 properties, <params> and <map>
   // <params> containing a {Array} of parameters (optional)
   // <map> thats contains a {object} with each property name equals
-  //       your data-scrall element attribute (required)
+  //       your data-scrall's element attribute's
   
   var obj = {
     params: ['my','array','of','params'],
@@ -29,7 +29,9 @@ http://renan.ninja/scraller/
       foo: function(){},
       bar: function(){},
       abc: function(my,array,of,params),
-      xyz: function()
+      xyz: function(),
+      outFromTop: function(params){alert('First element is out to up of view');},
+      outFromBottom: function(params){alert('Last element is out to down of view');}
     }
   }
   
@@ -38,8 +40,12 @@ http://renan.ninja/scraller/
 </script>
 ```
 
-## Support
-Chrome, Firefox, Opera, Safari, IE8+
+When the element has ```data-scrall-in``` the function with this property value is called from map object when element is visible on screen.
+
+When the element has ```data-scrall-out-top``` the function with this property value is called from map object when element gets invisible on screen leaving from top of page.
+
+When the element has ```data-scrall-out-bottom``` the function with this property value is called from map object when element gets invisible on screen leaving from bottom of page.
+
 
 ## License
 Dual - BSB license and MIT license

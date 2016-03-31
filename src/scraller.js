@@ -1,8 +1,8 @@
 ;(function(){
 
   var inAttributeName = 'data-scrall-in';
-  var offUpAttributeName = 'data-scrall-off-up';
-  var offDownAttributeName = 'data-scrall-off-down';
+  var outFromTopAttributeName = 'data-scrall-out-top';
+  var outFromBottomAttributeName = 'data-scrall-out-bottom';
 
   var Scraller = function(options){
     if(options === undefined || options === null){
@@ -13,7 +13,7 @@
     
     this.params = options.params;
     this.mapper = (options.map === undefined || typeof options.map !== "object") ? null : options.map;
-    this.elements = document.querySelectorAll('[data-scrall-in], [data-scrall-off-up], [data-scrall-off-down]');
+    this.elements = document.querySelectorAll('[' + inAttributeName + '], [' + outFromBottomAttributeName + '], [' + outFromTopAttributeName + ']');
 
     this.elementPosition = function(element) {
       var elementTopPosition = element.getBoundingClientRect().top;
@@ -26,14 +26,14 @@
       return position.top >= 0 && position.bottom <= window.innerHeight;
     };
     
-    this.isOffUpView = function(element){
+    this.comesOutFromTop = function(element){
       var position = _this.elementPosition(element);
-      return !self.isOnView(element) && position.top >= window.innerHeight;
+      return !self.isOnView(element) && position.bottom < 0;
     };
     
-    this.isOffDownView = function(element){
+    this.comesOutFromBottom = function(element){
       var position = _this.elementPosition(element);
-      return !self.isOnView(element) && position.bottom <= window.innerHeight;
+      return !self.isOnView(element) && position.top < window.innerHeight;
     };
 
     this.runScroll = function(){
@@ -46,20 +46,26 @@
       }
       
       for(var i = 0; i < l; i++){
+        var element = elements[i];
+        var seen = element.dataset.seen;
+        
         var inFunction = _this.mapper[elements[i].getAttribute(inAttributeName)];
-        var offUpFunction = _this.mapper[elements[i].getAttribute(offUpAttributeName)];
-        var offDownFunction = _this.mapper[elements[i].getAttribute(offDownAttributeName)];
+        var outFromTopFunction = _this.mapper[elements[i].getAttribute(outFromTopAttributeName)];
+        var outFromBottomFunction = _this.mapper[elements[i].getAttribute(outFromBottomAttributeName)];
         
         if(_this.isOnView(elements[i]) && inFunction){
           inFunction.apply(this, _this.params);
+          element.dataset.seen = true;
         }
         
-        if(_this.isOffUpView(elements[i]) && offUpFunction){
-          offUpFunction.apply(this, _this.params);
+        if(_this.comesOutFromTop(elements[i]) && !!outFromTopFunction && seen == "true"){
+          outFromTopFunction.apply(this, _this.params);
+          element.dataset.seen = false;
         }
         
-        if(_this.isOffDownView(elements[i]) && offDownFunction){
-          offDownFunction.apply(this, _this.params);
+        if(_this.comesOutFromBottom(elements[i]) && !!outFromBottomFunction && seen == "true"){
+          outFromBottomFunction.apply(this, _this.params);
+          element.dataset.seen = false;
         }
       }
       
