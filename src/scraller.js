@@ -11,7 +11,7 @@
     
     this.params = options.params;
     this.mapper = (options.map === undefined || typeof options.map !== "object") ? null : options.map;
-    this.elements = document.querySelectorAll('[' + inAttributeName + '], [' + outFromBottomAttributeName + '], [' + outFromTopAttributeName + ']');
+    this.scrallElements = document.querySelectorAll('[' + inAttributeName + '], [' + outFromBottomAttributeName + '], [' + outFromTopAttributeName + ']');
 
     this.elementPosition = function(element) {
       var elementTopPosition = element.getBoundingClientRect().top;
@@ -36,7 +36,7 @@
 
     this.runScroll = function(){
       
-      var elements = _this.elements;
+      var elements = _this.scrallElements;
       var l = elements.length;
       
       if (l === 0) {
