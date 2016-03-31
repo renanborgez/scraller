@@ -1,14 +1,12 @@
 ;(function(){
-
-  var inAttributeName = 'data-scrall-in';
-  var outFromTopAttributeName = 'data-scrall-out-top';
-  var outFromBottomAttributeName = 'data-scrall-out-bottom';
-
   var Scraller = function(options){
     if(options === undefined || options === null){
       throw new Error('Scraller with wrong signature.');
     }
-
+    var inAttributeName = 'data-scrall-in';
+    var outFromTopAttributeName = 'data-scrall-out-top';
+    var outFromBottomAttributeName = 'data-scrall-out-bottom';
+    
     var _this = this;
     
     this.params = options.params;
