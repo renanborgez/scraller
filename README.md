@@ -29,7 +29,7 @@ http://renan.ninja/scraller/
       foo: function(){},
       bar: function(){},
       abc: function(my,array,of,params),
-      xyz: function(),
+      xyz: function(){},
       outFromTop: function(params){alert('First element is out to up of view');},
       outFromBottom: function(params){alert('Last element is out to down of view');}
     }
