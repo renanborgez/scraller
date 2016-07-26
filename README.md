@@ -1,4 +1,4 @@
-# Scraller  [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/renanborgez/scraller/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+# Scraller
 Minimalist lib. Thats make easy to call a function when a element is scrolled into view.
 * No jquery
 * No dependencies
